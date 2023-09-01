@@ -76,7 +76,7 @@ body {
 	border-radius: 8px;
 }
 .gallery__left {
-	margin-top: calc(var(--gallery-gap) * 1.75);
+	margin-top: calc(var(--gallery-gap));
 }
 .gallery__right .gallery__item {
 	margin: 0;
@@ -392,7 +392,7 @@ a:hover  {
 .tags-cloud {
   position: fixed;
   top: 520px;
-  left: 750px;
+  right: 15vw;
   width: 600px;
   list-style: none;
   opacity: 0;
