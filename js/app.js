@@ -283,10 +283,11 @@ function main() {
 
     document.addEventListener("mousemove", e => {
       if (!isActivated) {
-        cursor.classList.add("-activated");
+        cursor?.classList.add("-activated");
       }
-
-      cursor.style.transform = `translateX(${e.clientX}px) translateY(${e.clientY}px)`;
+      if(cursor){
+        cursor.style.transform = `translateX(${e.clientX}px) translateY(${e.clientY}px)`;
+      }
     });
   }
 }

@@ -164,4 +164,20 @@
       </div>
     </div>
   </body>
+  <script>
+    // JavaScript to adjust the viewport scale based on width increase
+    function adjustViewportScale() {
+        const maxViewportWidth = 1200; // Set your max-width here
+        const currentViewportWidth = window.innerWidth;
+        const scaleFactor = currentViewportWidth / maxViewportWidth;
+        const newScale = 1 + scaleFactor;
+
+        // Update the viewport meta tag
+        document.querySelector('meta[name="viewport"]').setAttribute('content', `width=device-width, initial-scale=${newScale}`);
+    }
+
+    // Call the function on page load and window resize
+    window.addEventListener('load', adjustViewportScale);
+    window.addEventListener('resize', adjustViewportScale);
+</script>
 </html>
